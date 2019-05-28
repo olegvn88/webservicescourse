@@ -20,7 +20,7 @@ func (w *Wallet) String() string {
 func Buy(in interface{}) {
 	var p Payer
 	var ok bool
-	if p, ok = in.(Payer); ok {
+	if p, ok = in.(Payer); !ok {
 		fmt.Printf("%T is not means of payment\n\n", in)
 		return
 	}
@@ -28,12 +28,20 @@ func Buy(in interface{}) {
 	if err != nil {
 		fmt.Printf("Error during of payment %T: %v\n\n", p, err)
 	}
-	fmt.Printf("Thnka you for the purchase via %T\n\n", p)
+	fmt.Printf("Thank you for the purchase via %T\n\n", p)
+}
+
+func (w *Wallet) Pay(amount int) error {
+	if w.Cash < amount {
+		return fmt.Errorf("Not enough money")
+	}
+	w.Cash -= amount
+	return nil
 }
 
 func main() {
 	myWallet := &Wallet{Cash: 100}
-	fmt.Printf("Raw payment : %#v\n", myWallet)   // полное представление структуры
-	fmt.Printf("Payment method : %s\n", myWallet) // строка
-	Buy(&myWallet)
+	Buy(myWallet)
+	Buy([]int{1, 2, 3})
+	Buy(3.14)
 }
