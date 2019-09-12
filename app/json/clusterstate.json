@@ -1,0 +1,2275 @@
+{
+  "apiVersion": "v1",
+  "items": [
+    {
+      "apiVersion": "config.openshift.io/v1",
+      "kind": "ClusterOperator",
+      "metadata": {
+        "creationTimestamp": "2019-09-09T15:50:49Z",
+        "generation": 1,
+        "name": "authentication",
+        "resourceVersion": "16432",
+        "selfLink": "/apis/config.openshift.io/v1/clusteroperators/authentication",
+        "uid": "98969c76-d319-11e9-869e-0228550fc200"
+      },
+      "spec": {},
+      "status": {
+        "conditions": [
+          {
+            "lastTransitionTime": "2019-09-09T15:56:32Z",
+            "reason": "AsExpected",
+            "status": "False",
+            "type": "Degraded"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T16:02:31Z",
+            "reason": "AsExpected",
+            "status": "False",
+            "type": "Progressing"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T16:02:31Z",
+            "reason": "AsExpected",
+            "status": "True",
+            "type": "Available"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:50:50Z",
+            "reason": "AsExpected",
+            "status": "True",
+            "type": "Upgradeable"
+          }
+        ],
+        "extension": null,
+        "relatedObjects": [
+          {
+            "group": "operator.openshift.io",
+            "name": "cluster",
+            "resource": "authentications"
+          },
+          {
+            "group": "config.openshift.io",
+            "name": "cluster",
+            "resource": "authentications"
+          },
+          {
+            "group": "config.openshift.io",
+            "name": "cluster",
+            "resource": "infrastructures"
+          },
+          {
+            "group": "config.openshift.io",
+            "name": "cluster",
+            "resource": "oauths"
+          },
+          {
+            "group": "",
+            "name": "openshift-config",
+            "resource": "namespaces"
+          },
+          {
+            "group": "",
+            "name": "openshift-config-managed",
+            "resource": "namespaces"
+          },
+          {
+            "group": "",
+            "name": "openshift-authentication",
+            "resource": "namespaces"
+          },
+          {
+            "group": "",
+            "name": "openshift-authentication-operator",
+            "resource": "namespaces"
+          }
+        ],
+        "versions": [
+          {
+            "name": "operator",
+            "version": "4.2.0-0.nightly-2019-09-04-142146"
+          },
+          {
+            "name": "oauth-openshift",
+            "version": "4.2.0-0.nightly-2019-09-04-142146_openshift"
+          }
+        ]
+      }
+    },
+    {
+      "apiVersion": "config.openshift.io/v1",
+      "kind": "ClusterOperator",
+      "metadata": {
+        "creationTimestamp": "2019-09-09T15:47:33Z",
+        "generation": 1,
+        "name": "cloud-credential",
+        "resourceVersion": "4100",
+        "selfLink": "/apis/config.openshift.io/v1/clusteroperators/cloud-credential",
+        "uid": "23bf47cd-d319-11e9-ab44-0e4ce3d5a8c4"
+      },
+      "spec": {},
+      "status": {
+        "conditions": [
+          {
+            "lastTransitionTime": "2019-09-09T15:48:10Z",
+            "message": "No credentials requests reporting errors.",
+            "reason": "NoCredentialsFailing",
+            "status": "False",
+            "type": "Degraded"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:48:10Z",
+            "message": "4 of 4 credentials requests provisioned and reconciled.",
+            "reason": "ReconcilingComplete",
+            "status": "False",
+            "type": "Progressing"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:47:33Z",
+            "status": "True",
+            "type": "Available"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:47:33Z",
+            "status": "True",
+            "type": "Upgradeable"
+          }
+        ],
+        "extension": null,
+        "relatedObjects": [
+          {
+            "group": "",
+            "name": "openshift-cloud-credential-operator",
+            "resource": "namespaces"
+          },
+          {
+            "group": "cloudcredential.openshift.io",
+            "name": "cloud-credential-operator-iam-ro",
+            "namespace": "openshift-cloud-credential-operator",
+            "resource": "CredentialsRequest"
+          },
+          {
+            "group": "cloudcredential.openshift.io",
+            "name": "openshift-image-registry",
+            "namespace": "openshift-cloud-credential-operator",
+            "resource": "CredentialsRequest"
+          },
+          {
+            "group": "cloudcredential.openshift.io",
+            "name": "openshift-image-registry-azure",
+            "namespace": "openshift-cloud-credential-operator",
+            "resource": "CredentialsRequest"
+          },
+          {
+            "group": "cloudcredential.openshift.io",
+            "name": "openshift-image-registry-gcs",
+            "namespace": "openshift-cloud-credential-operator",
+            "resource": "CredentialsRequest"
+          },
+          {
+            "group": "cloudcredential.openshift.io",
+            "name": "openshift-image-registry-openstack",
+            "namespace": "openshift-cloud-credential-operator",
+            "resource": "CredentialsRequest"
+          },
+          {
+            "group": "cloudcredential.openshift.io",
+            "name": "openshift-ingress",
+            "namespace": "openshift-cloud-credential-operator",
+            "resource": "CredentialsRequest"
+          },
+          {
+            "group": "cloudcredential.openshift.io",
+            "name": "openshift-ingress-azure",
+            "namespace": "openshift-cloud-credential-operator",
+            "resource": "CredentialsRequest"
+          },
+          {
+            "group": "cloudcredential.openshift.io",
+            "name": "openshift-ingress-gcp",
+            "namespace": "openshift-cloud-credential-operator",
+            "resource": "CredentialsRequest"
+          },
+          {
+            "group": "cloudcredential.openshift.io",
+            "name": "openshift-machine-api-aws",
+            "namespace": "openshift-cloud-credential-operator",
+            "resource": "CredentialsRequest"
+          },
+          {
+            "group": "cloudcredential.openshift.io",
+            "name": "openshift-machine-api-azure",
+            "namespace": "openshift-cloud-credential-operator",
+            "resource": "CredentialsRequest"
+          },
+          {
+            "group": "cloudcredential.openshift.io",
+            "name": "openshift-machine-api-gcp",
+            "namespace": "openshift-cloud-credential-operator",
+            "resource": "CredentialsRequest"
+          },
+          {
+            "group": "cloudcredential.openshift.io",
+            "name": "openshift-machine-api-openstack",
+            "namespace": "openshift-cloud-credential-operator",
+            "resource": "CredentialsRequest"
+          }
+        ],
+        "versions": [
+          {
+            "name": "operator",
+            "version": "4.2.0-0.nightly-2019-09-04-142146"
+          }
+        ]
+      }
+    },
+    {
+      "apiVersion": "config.openshift.io/v1",
+      "kind": "ClusterOperator",
+      "metadata": {
+        "creationTimestamp": "2019-09-09T15:52:12Z",
+        "generation": 1,
+        "name": "cluster-autoscaler",
+        "resourceVersion": "10747",
+        "selfLink": "/apis/config.openshift.io/v1/clusteroperators/cluster-autoscaler",
+        "uid": "c9c240df-d319-11e9-a5c4-12d0f943c266"
+      },
+      "spec": {},
+      "status": {
+        "conditions": [
+          {
+            "lastTransitionTime": "2019-09-09T15:52:12Z",
+            "message": "at version 4.2.0-0.nightly-2019-09-04-142146",
+            "status": "True",
+            "type": "Available"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:52:12Z",
+            "status": "False",
+            "type": "Progressing"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:52:12Z",
+            "status": "False",
+            "type": "Degraded"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:52:12Z",
+            "status": "True",
+            "type": "Upgradeable"
+          }
+        ],
+        "extension": null,
+        "relatedObjects": [
+          {
+            "group": "",
+            "name": "openshift-machine-api",
+            "resource": "namespaces"
+          }
+        ],
+        "versions": [
+          {
+            "name": "operator",
+            "version": "4.2.0-0.nightly-2019-09-04-142146"
+          }
+        ]
+      }
+    },
+    {
+      "apiVersion": "config.openshift.io/v1",
+      "kind": "ClusterOperator",
+      "metadata": {
+        "creationTimestamp": "2019-09-09T15:51:12Z",
+        "generation": 1,
+        "name": "console",
+        "resourceVersion": "13942",
+        "selfLink": "/apis/config.openshift.io/v1/clusteroperators/console",
+        "uid": "a5f1fdd9-d319-11e9-a26d-0e1292c9e4d0"
+      },
+      "spec": {},
+      "status": {
+        "conditions": [
+          {
+            "lastTransitionTime": "2019-09-09T15:51:12Z",
+            "reason": "AsExpected",
+            "status": "False",
+            "type": "Degraded"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:55:20Z",
+            "reason": "AsExpected",
+            "status": "False",
+            "type": "Progressing"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:55:36Z",
+            "reason": "AsExpected",
+            "status": "True",
+            "type": "Available"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:51:12Z",
+            "reason": "AsExpected",
+            "status": "True",
+            "type": "Upgradeable"
+          }
+        ],
+        "extension": null,
+        "relatedObjects": [
+          {
+            "group": "operator.openshift.io",
+            "name": "cluster",
+            "resource": "consoles"
+          },
+          {
+            "group": "config.openshift.io",
+            "name": "cluster",
+            "resource": "consoles"
+          },
+          {
+            "group": "config.openshift.io",
+            "name": "cluster",
+            "resource": "infrastructures"
+          },
+          {
+            "group": "config.openshift.io",
+            "name": "cluster",
+            "resource": "proxies"
+          },
+          {
+            "group": "oauth.openshift.io",
+            "name": "console",
+            "resource": "oauthclients"
+          },
+          {
+            "group": "",
+            "name": "openshift-console-operator",
+            "resource": "namespaces"
+          },
+          {
+            "group": "",
+            "name": "openshift-console",
+            "resource": "namespaces"
+          },
+          {
+            "group": "",
+            "name": "console-public",
+            "namespace": "openshift-config-managed",
+            "resource": "configmaps"
+          }
+        ],
+        "versions": [
+          {
+            "name": "operator",
+            "version": "4.2.0-0.nightly-2019-09-04-142146"
+          }
+        ]
+      }
+    },
+    {
+      "apiVersion": "config.openshift.io/v1",
+      "kind": "ClusterOperator",
+      "metadata": {
+        "creationTimestamp": "2019-09-09T15:47:36Z",
+        "generation": 1,
+        "name": "dns",
+        "resourceVersion": "349894",
+        "selfLink": "/apis/config.openshift.io/v1/clusteroperators/dns",
+        "uid": "25600a03-d319-11e9-ab44-0e4ce3d5a8c4"
+      },
+      "spec": {},
+      "status": {
+        "conditions": [
+          {
+            "lastTransitionTime": "2019-09-10T08:47:55Z",
+            "message": "All desired DNS DaemonSets available and operand Namespace exists",
+            "reason": "AsExpected",
+            "status": "False",
+            "type": "Degraded"
+          },
+          {
+            "lastTransitionTime": "2019-09-10T08:47:55Z",
+            "message": "Desired and available number of DNS DaemonSets are equal",
+            "reason": "AsExpected",
+            "status": "False",
+            "type": "Progressing"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:47:55Z",
+            "message": "At least 1 DNS DaemonSet available",
+            "reason": "AsExpected",
+            "status": "True",
+            "type": "Available"
+          }
+        ],
+        "extension": null,
+        "relatedObjects": [
+          {
+            "group": "",
+            "name": "openshift-dns-operator",
+            "resource": "namespaces"
+          },
+          {
+            "group": "",
+            "name": "openshift-dns",
+            "resource": "namespaces"
+          },
+          {
+            "group": "operator.openshift.io",
+            "name": "default",
+            "resource": "DNS"
+          }
+        ],
+        "versions": [
+          {
+            "name": "operator",
+            "version": "4.2.0-0.nightly-2019-09-04-142146"
+          },
+          {
+            "name": "coredns",
+            "version": "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:af0252b8f70e349a352cff7d412c293441491ef1c903fc8322e73a3757ab24db"
+          },
+          {
+            "name": "openshift-cli",
+            "version": "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:dd53b2913c55634f136189ba6ef9c76869a1d8cbf57badcc44b4c690c70b610d"
+          }
+        ]
+      }
+    },
+    {
+      "apiVersion": "config.openshift.io/v1",
+      "kind": "ClusterOperator",
+      "metadata": {
+        "creationTimestamp": "2019-09-09T15:51:29Z",
+        "generation": 1,
+        "name": "image-registry",
+        "resourceVersion": "11699",
+        "selfLink": "/apis/config.openshift.io/v1/clusteroperators/image-registry",
+        "uid": "b06e4093-d319-11e9-a5c4-12d0f943c266"
+      },
+      "spec": {},
+      "status": {
+        "conditions": [
+          {
+            "lastTransitionTime": "2019-09-09T15:52:45Z",
+            "message": "The registry is ready",
+            "reason": "Ready",
+            "status": "True",
+            "type": "Available"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:52:47Z",
+            "message": "The registry is ready",
+            "reason": "Ready",
+            "status": "False",
+            "type": "Progressing"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:51:30Z",
+            "status": "False",
+            "type": "Degraded"
+          }
+        ],
+        "extension": null,
+        "relatedObjects": [
+          {
+            "group": "rbac.authorization.k8s.io",
+            "name": "system:registry",
+            "resource": "clusterroles"
+          },
+          {
+            "group": "rbac.authorization.k8s.io",
+            "name": "registry-registry-role",
+            "resource": "clusterrolebindings"
+          },
+          {
+            "group": "",
+            "name": "registry",
+            "namespace": "openshift-image-registry",
+            "resource": "serviceaccounts"
+          },
+          {
+            "group": "",
+            "name": "serviceca",
+            "namespace": "openshift-image-registry",
+            "resource": "configmaps"
+          },
+          {
+            "group": "",
+            "name": "image-registry-certificates",
+            "namespace": "openshift-image-registry",
+            "resource": "configmaps"
+          },
+          {
+            "group": "",
+            "name": "image-registry-private-configuration",
+            "namespace": "openshift-image-registry",
+            "resource": "secrets"
+          },
+          {
+            "group": "config.openshift.io",
+            "name": "cluster",
+            "resource": "images"
+          },
+          {
+            "group": "apps",
+            "name": "node-ca",
+            "namespace": "openshift-image-registry",
+            "resource": "daemonsets"
+          },
+          {
+            "group": "",
+            "name": "image-registry",
+            "namespace": "openshift-image-registry",
+            "resource": "services"
+          },
+          {
+            "group": "apps",
+            "name": "image-registry",
+            "namespace": "openshift-image-registry",
+            "resource": "deployments"
+          }
+        ],
+        "versions": [
+          {
+            "name": "operator",
+            "version": "4.2.0-0.nightly-2019-09-04-142146"
+          }
+        ]
+      }
+    },
+    {
+      "apiVersion": "config.openshift.io/v1",
+      "kind": "ClusterOperator",
+      "metadata": {
+        "creationTimestamp": "2019-09-09T15:51:32Z",
+        "generation": 1,
+        "name": "ingress",
+        "resourceVersion": "11922",
+        "selfLink": "/apis/config.openshift.io/v1/clusteroperators/ingress",
+        "uid": "b1fe636c-d319-11e9-a5c4-12d0f943c266"
+      },
+      "spec": {},
+      "status": {
+        "conditions": [
+          {
+            "lastTransitionTime": "2019-09-09T15:51:32Z",
+            "reason": "NoIngressControllersDegraded",
+            "status": "False",
+            "type": "Degraded"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:52:49Z",
+            "message": "desired and current number of IngressControllers are equal",
+            "status": "False",
+            "type": "Progressing"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:52:45Z",
+            "message": "desired and current number of IngressControllers are equal",
+            "status": "True",
+            "type": "Available"
+          }
+        ],
+        "extension": null,
+        "relatedObjects": [
+          {
+            "group": "",
+            "name": "openshift-ingress-operator",
+            "resource": "namespaces"
+          },
+          {
+            "group": "",
+            "name": "openshift-ingress",
+            "resource": "namespaces"
+          },
+          {
+            "group": "operator.openshift.io",
+            "name": "default",
+            "namespace": "openshift-ingress-operator",
+            "resource": "IngressController"
+          },
+          {
+            "group": "ingress.operator.openshift.io",
+            "name": "default-wildcard",
+            "namespace": "openshift-ingress-operator",
+            "resource": "DNSRecord"
+          }
+        ],
+        "versions": [
+          {
+            "name": "operator",
+            "version": "4.2.0-0.nightly-2019-09-04-142146"
+          },
+          {
+            "name": "ingress-controller",
+            "version": "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:b10ec8e2828db02fd8bcb1704a071afce7d35e7a9415a4d227cd0c645eeb8cac"
+          }
+        ]
+      }
+    },
+    {
+      "apiVersion": "config.openshift.io/v1",
+      "kind": "ClusterOperator",
+      "metadata": {
+        "creationTimestamp": "2019-09-09T15:47:22Z",
+        "generation": 1,
+        "name": "insights",
+        "resourceVersion": "1453383",
+        "selfLink": "/apis/config.openshift.io/v1/clusteroperators/insights",
+        "uid": "1cbc05a1-d319-11e9-ab44-0e4ce3d5a8c4"
+      },
+      "spec": {},
+      "status": {
+        "conditions": [
+          {
+            "lastTransitionTime": "2019-09-09T15:47:22Z",
+            "status": "False",
+            "type": "Degraded"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:47:22Z",
+            "status": "True",
+            "type": "Available"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:49:22Z",
+            "message": "Monitoring the cluster",
+            "status": "False",
+            "type": "Progressing"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:49:22Z",
+            "status": "False",
+            "type": "Disabled"
+          }
+        ],
+        "extension": {
+          "lastReportTime": "2019-09-12T06:58:32Z"
+        },
+        "relatedObjects": [
+          {
+            "group": "",
+            "name": "openshift-insights",
+            "resource": "namespaces"
+          },
+          {
+            "group": "apps",
+            "name": "insights-operator",
+            "namespace": "openshift-insights",
+            "resource": "deployments"
+          }
+        ],
+        "versions": [
+          {
+            "name": "operator",
+            "version": "4.2.0-0.nightly-2019-09-04-142146"
+          }
+        ]
+      }
+    },
+    {
+      "apiVersion": "config.openshift.io/v1",
+      "kind": "ClusterOperator",
+      "metadata": {
+        "creationTimestamp": "2019-09-09T15:47:35Z",
+        "generation": 1,
+        "name": "kube-apiserver",
+        "resourceVersion": "522980",
+        "selfLink": "/apis/config.openshift.io/v1/clusteroperators/kube-apiserver",
+        "uid": "24c5231b-d319-11e9-ab44-0e4ce3d5a8c4"
+      },
+      "spec": {},
+      "status": {
+        "conditions": [
+          {
+            "lastTransitionTime": "2019-09-09T15:56:47Z",
+            "message": "NodeControllerDegraded: All master node(s) are ready",
+            "reason": "AsExpected",
+            "status": "False",
+            "type": "Degraded"
+          },
+          {
+            "lastTransitionTime": "2019-09-10T15:34:57Z",
+            "message": "Progressing: 3 nodes are at revision 10",
+            "reason": "AsExpected",
+            "status": "False",
+            "type": "Progressing"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:49:59Z",
+            "message": "Available: 3 nodes are active; 3 nodes are at revision 10",
+            "reason": "AsExpected",
+            "status": "True",
+            "type": "Available"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:47:36Z",
+            "reason": "AsExpected",
+            "status": "True",
+            "type": "Upgradeable"
+          }
+        ],
+        "extension": null,
+        "relatedObjects": [
+          {
+            "group": "operator.openshift.io",
+            "name": "cluster",
+            "resource": "kubeapiservers"
+          },
+          {
+            "group": "",
+            "name": "openshift-config",
+            "resource": "namespaces"
+          },
+          {
+            "group": "",
+            "name": "openshift-config-managed",
+            "resource": "namespaces"
+          },
+          {
+            "group": "",
+            "name": "openshift-kube-apiserver-operator",
+            "resource": "namespaces"
+          },
+          {
+            "group": "",
+            "name": "openshift-kube-apiserver",
+            "resource": "namespaces"
+          }
+        ],
+        "versions": [
+          {
+            "name": "raw-internal",
+            "version": "4.2.0-0.nightly-2019-09-04-142146"
+          },
+          {
+            "name": "kube-apiserver",
+            "version": "1.14.0"
+          },
+          {
+            "name": "operator",
+            "version": "4.2.0-0.nightly-2019-09-04-142146"
+          }
+        ]
+      }
+    },
+    {
+      "apiVersion": "config.openshift.io/v1",
+      "kind": "ClusterOperator",
+      "metadata": {
+        "creationTimestamp": "2019-09-09T15:47:36Z",
+        "generation": 1,
+        "name": "kube-controller-manager",
+        "resourceVersion": "406372",
+        "selfLink": "/apis/config.openshift.io/v1/clusteroperators/kube-controller-manager",
+        "uid": "25139bee-d319-11e9-ab44-0e4ce3d5a8c4"
+      },
+      "spec": {},
+      "status": {
+        "conditions": [
+          {
+            "lastTransitionTime": "2019-09-09T15:50:46Z",
+            "message": "NodeControllerDegraded: All master node(s) are ready",
+            "reason": "AsExpected",
+            "status": "False",
+            "type": "Degraded"
+          },
+          {
+            "lastTransitionTime": "2019-09-10T10:48:50Z",
+            "message": "Progressing: 3 nodes are at revision 5",
+            "reason": "AsExpected",
+            "status": "False",
+            "type": "Progressing"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:48:53Z",
+            "message": "Available: 3 nodes are active; 3 nodes are at revision 5",
+            "reason": "AsExpected",
+            "status": "True",
+            "type": "Available"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:47:44Z",
+            "reason": "AsExpected",
+            "status": "True",
+            "type": "Upgradeable"
+          }
+        ],
+        "extension": null,
+        "relatedObjects": [
+          {
+            "group": "operator.openshift.io",
+            "name": "cluster",
+            "resource": "kubecontrollermanagers"
+          },
+          {
+            "group": "",
+            "name": "openshift-config",
+            "resource": "namespaces"
+          },
+          {
+            "group": "",
+            "name": "openshift-config-managed",
+            "resource": "namespaces"
+          },
+          {
+            "group": "",
+            "name": "openshift-kube-controller-manager",
+            "resource": "namespaces"
+          },
+          {
+            "group": "",
+            "name": "openshift-kube-controller-manager-operator",
+            "resource": "namespaces"
+          }
+        ],
+        "versions": [
+          {
+            "name": "raw-internal",
+            "version": "4.2.0-0.nightly-2019-09-04-142146"
+          },
+          {
+            "name": "kube-controller-manager",
+            "version": "1.14.0"
+          },
+          {
+            "name": "operator",
+            "version": "4.2.0-0.nightly-2019-09-04-142146"
+          }
+        ]
+      }
+    },
+    {
+      "apiVersion": "config.openshift.io/v1",
+      "kind": "ClusterOperator",
+      "metadata": {
+        "creationTimestamp": "2019-09-09T15:47:36Z",
+        "generation": 1,
+        "name": "kube-scheduler",
+        "resourceVersion": "13987",
+        "selfLink": "/apis/config.openshift.io/v1/clusteroperators/kube-scheduler",
+        "uid": "254a8238-d319-11e9-ab44-0e4ce3d5a8c4"
+      },
+      "spec": {},
+      "status": {
+        "conditions": [
+          {
+            "lastTransitionTime": "2019-09-09T15:53:33Z",
+            "message": "NodeControllerDegraded: All master node(s) are ready",
+            "reason": "AsExpected",
+            "status": "False",
+            "type": "Degraded"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:55:43Z",
+            "message": "Progressing: 3 nodes are at revision 5",
+            "reason": "AsExpected",
+            "status": "False",
+            "type": "Progressing"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:49:40Z",
+            "message": "Available: 3 nodes are active; 3 nodes are at revision 5",
+            "reason": "AsExpected",
+            "status": "True",
+            "type": "Available"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:47:36Z",
+            "reason": "AsExpected",
+            "status": "True",
+            "type": "Upgradeable"
+          }
+        ],
+        "extension": null,
+        "relatedObjects": [
+          {
+            "group": "operator.openshift.io",
+            "name": "cluster",
+            "resource": "kubeschedulers"
+          },
+          {
+            "group": "",
+            "name": "openshift-config",
+            "resource": "namespaces"
+          },
+          {
+            "group": "",
+            "name": "openshift-kube-scheduler",
+            "resource": "namespaces"
+          },
+          {
+            "group": "",
+            "name": "openshift-kube-scheduler-operator",
+            "resource": "namespaces"
+          }
+        ],
+        "versions": [
+          {
+            "name": "raw-internal",
+            "version": "4.2.0-0.nightly-2019-09-04-142146"
+          },
+          {
+            "name": "kube-scheduler",
+            "version": "1.14.0"
+          },
+          {
+            "name": "operator",
+            "version": "4.2.0-0.nightly-2019-09-04-142146"
+          }
+        ]
+      }
+    },
+    {
+      "apiVersion": "config.openshift.io/v1",
+      "kind": "ClusterOperator",
+      "metadata": {
+        "creationTimestamp": "2019-09-09T15:47:39Z",
+        "generation": 1,
+        "name": "machine-api",
+        "resourceVersion": "1456599",
+        "selfLink": "/apis/config.openshift.io/v1/clusteroperators/machine-api",
+        "uid": "2716a145-d319-11e9-ab44-0e4ce3d5a8c4"
+      },
+      "spec": {},
+      "status": {
+        "conditions": [
+          {
+            "lastTransitionTime": "2019-09-09T15:47:53Z",
+            "status": "False",
+            "type": "Progressing"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:47:39Z",
+            "message": "Cluster Machine API Operator is available at operator: 4.2.0-0.nightly-2019-09-04-142146",
+            "status": "True",
+            "type": "Available"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:47:39Z",
+            "status": "False",
+            "type": "Degraded"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:47:39Z",
+            "status": "True",
+            "type": "Upgradeable"
+          }
+        ],
+        "extension": null,
+        "relatedObjects": [
+          {
+            "group": "",
+            "name": "openshift-machine-api",
+            "resource": "namespaces"
+          }
+        ],
+        "versions": [
+          {
+            "name": "operator",
+            "version": "4.2.0-0.nightly-2019-09-04-142146"
+          }
+        ]
+      }
+    },
+    {
+      "apiVersion": "config.openshift.io/v1",
+      "kind": "ClusterOperator",
+      "metadata": {
+        "creationTimestamp": "2019-09-09T15:47:30Z",
+        "generation": 1,
+        "name": "machine-config",
+        "resourceVersion": "349946",
+        "selfLink": "/apis/config.openshift.io/v1/clusteroperators/machine-config",
+        "uid": "21e59f82-d319-11e9-ab44-0e4ce3d5a8c4"
+      },
+      "spec": {},
+      "status": {
+        "conditions": [
+          {
+            "lastTransitionTime": "2019-09-09T15:48:08Z",
+            "message": "Cluster has deployed 4.2.0-0.nightly-2019-09-04-142146",
+            "status": "True",
+            "type": "Available"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:48:09Z",
+            "message": "Cluster version is 4.2.0-0.nightly-2019-09-04-142146",
+            "status": "False",
+            "type": "Progressing"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:47:30Z",
+            "status": "False",
+            "type": "Degraded"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:48:08Z",
+            "reason": "AsExpected",
+            "status": "True",
+            "type": "Upgradeable"
+          }
+        ],
+        "extension": {
+          "master": "all 3 nodes are at latest configuration rendered-master-06e4ff34235ce27c42f670551291bcd6",
+          "worker": "all 4 nodes are at latest configuration rendered-worker-2cc629796f3fc054d380dcfef971a736"
+        },
+        "relatedObjects": [
+          {
+            "group": "",
+            "name": "openshift-machine-config-operator",
+            "resource": "namespaces"
+          },
+          {
+            "group": "machineconfiguration.openshift.io",
+            "name": "master",
+            "resource": "machineconfigpools"
+          },
+          {
+            "group": "machineconfiguration.openshift.io",
+            "name": "worker",
+            "resource": "machineconfigpools"
+          },
+          {
+            "group": "machineconfiguration.openshift.io",
+            "name": "machine-config-controller",
+            "resource": "controllerconfigs"
+          }
+        ],
+        "versions": [
+          {
+            "name": "operator",
+            "version": "4.2.0-0.nightly-2019-09-04-142146"
+          }
+        ]
+      }
+    },
+    {
+      "apiVersion": "config.openshift.io/v1",
+      "kind": "ClusterOperator",
+      "metadata": {
+        "creationTimestamp": "2019-09-09T15:51:28Z",
+        "generation": 1,
+        "name": "marketplace",
+        "resourceVersion": "10944",
+        "selfLink": "/apis/config.openshift.io/v1/clusteroperators/marketplace",
+        "uid": "afb1cb76-d319-11e9-a26d-0e1292c9e4d0"
+      },
+      "spec": {},
+      "status": {
+        "conditions": [
+          {
+            "lastTransitionTime": "2019-09-09T15:52:08Z",
+            "message": "Successfully progressed to release version: 4.2.0-0.nightly-2019-09-04-142146",
+            "reason": "OperatorAvailable",
+            "status": "False",
+            "type": "Progressing"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:52:08Z",
+            "message": "Available release version: 4.2.0-0.nightly-2019-09-04-142146",
+            "reason": "OperatorAvailable",
+            "status": "True",
+            "type": "Available"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:51:48Z",
+            "message": "Marketplace is upgradeable",
+            "reason": "OperatorAvailable",
+            "status": "True",
+            "type": "Upgradeable"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:51:28Z",
+            "message": "Current CR sync ratio (1) meets the expected success ratio (0.3)",
+            "reason": "OperandTransitionsSucceeding",
+            "status": "False",
+            "type": "Degraded"
+          }
+        ],
+        "extension": null,
+        "relatedObjects": [
+          {
+            "group": "",
+            "name": "openshift-marketplace",
+            "resource": "namespaces"
+          },
+          {
+            "group": "operators.coreos.com",
+            "name": "",
+            "namespace": "openshift-marketplace",
+            "resource": "OperatorSource"
+          },
+          {
+            "group": "operators.coreos.com",
+            "name": "",
+            "namespace": "openshift-marketplace",
+            "resource": "CatalogSourceConfig"
+          },
+          {
+            "group": "operators.coreos.com",
+            "name": "",
+            "namespace": "openshift-marketplace",
+            "resource": "CatalogSource"
+          }
+        ],
+        "versions": [
+          {
+            "name": "operator",
+            "version": "4.2.0-0.nightly-2019-09-04-142146"
+          }
+        ]
+      }
+    },
+    {
+      "apiVersion": "config.openshift.io/v1",
+      "kind": "ClusterOperator",
+      "metadata": {
+        "creationTimestamp": "2019-09-09T15:51:26Z",
+        "generation": 1,
+        "name": "monitoring",
+        "resourceVersion": "1456622",
+        "selfLink": "/apis/config.openshift.io/v1/clusteroperators/monitoring",
+        "uid": "ae838b62-d319-11e9-a26d-0e1292c9e4d0"
+      },
+      "spec": {},
+      "status": {
+        "conditions": [
+          {
+            "lastTransitionTime": "2019-09-12T07:06:52Z",
+            "message": "Rollout of the monitoring stack is in progress. Please wait until it finishes.",
+            "reason": "RollOutInProgress",
+            "status": "True",
+            "type": "Upgradeable"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:54:02Z",
+            "message": "Successfully rolled out the stack.",
+            "reason": "RollOutDone",
+            "status": "True",
+            "type": "Available"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:54:02Z",
+            "status": "False",
+            "type": "Progressing"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:54:02Z",
+            "status": "False",
+            "type": "Degraded"
+          }
+        ],
+        "extension": null,
+        "relatedObjects": [
+          {
+            "group": "operator.openshift.io",
+            "name": "cluster",
+            "resource": "monitoring"
+          },
+          {
+            "group": "",
+            "name": "openshift-monitoring",
+            "resource": "namespaces"
+          }
+        ],
+        "versions": [
+          {
+            "name": "operator",
+            "version": "4.2.0-0.nightly-2019-09-04-142146"
+          }
+        ]
+      }
+    },
+    {
+      "apiVersion": "config.openshift.io/v1",
+      "kind": "ClusterOperator",
+      "metadata": {
+        "creationTimestamp": "2019-09-09T15:45:48Z",
+        "generation": 1,
+        "name": "network",
+        "resourceVersion": "349696",
+        "selfLink": "/apis/config.openshift.io/v1/clusteroperators/network",
+        "uid": "e52dbef3-d318-11e9-ab44-0e4ce3d5a8c4"
+      },
+      "spec": {},
+      "status": {
+        "conditions": [
+          {
+            "lastTransitionTime": "2019-09-09T15:45:49Z",
+            "status": "False",
+            "type": "Degraded"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:45:49Z",
+            "status": "True",
+            "type": "Upgradeable"
+          },
+          {
+            "lastTransitionTime": "2019-09-10T08:47:24Z",
+            "status": "False",
+            "type": "Progressing"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:48:21Z",
+            "status": "True",
+            "type": "Available"
+          }
+        ],
+        "extension": null,
+        "relatedObjects": [
+          {
+            "group": "",
+            "name": "applied-cluster",
+            "namespace": "openshift-network-operator",
+            "resource": "configmaps"
+          },
+          {
+            "group": "apiextensions.k8s.io",
+            "name": "network-attachment-definitions.k8s.cni.cncf.io",
+            "resource": "customresourcedefinitions"
+          },
+          {
+            "group": "",
+            "name": "openshift-multus",
+            "resource": "namespaces"
+          },
+          {
+            "group": "rbac.authorization.k8s.io",
+            "name": "multus",
+            "resource": "clusterroles"
+          },
+          {
+            "group": "",
+            "name": "multus",
+            "namespace": "openshift-multus",
+            "resource": "serviceaccounts"
+          },
+          {
+            "group": "rbac.authorization.k8s.io",
+            "name": "multus",
+            "resource": "clusterrolebindings"
+          },
+          {
+            "group": "apps",
+            "name": "multus",
+            "namespace": "openshift-multus",
+            "resource": "daemonsets"
+          },
+          {
+            "group": "",
+            "name": "multus-admission-controller",
+            "namespace": "openshift-multus",
+            "resource": "services"
+          },
+          {
+            "group": "rbac.authorization.k8s.io",
+            "name": "multus-admission-controller-webhook",
+            "resource": "clusterroles"
+          },
+          {
+            "group": "rbac.authorization.k8s.io",
+            "name": "multus-admission-controller-webhook",
+            "resource": "clusterrolebindings"
+          },
+          {
+            "group": "admissionregistration.k8s.io",
+            "name": "multus.openshift.io",
+            "resource": "validatingwebhookconfigurations"
+          },
+          {
+            "group": "",
+            "name": "openshift-service-ca",
+            "namespace": "openshift-network-operator",
+            "resource": "configmaps"
+          },
+          {
+            "group": "apps",
+            "name": "multus-admission-controller",
+            "namespace": "openshift-multus",
+            "resource": "daemonsets"
+          },
+          {
+            "group": "",
+            "name": "openshift-sdn",
+            "resource": "namespaces"
+          },
+          {
+            "group": "apiextensions.k8s.io",
+            "name": "clusternetworks.network.openshift.io",
+            "resource": "customresourcedefinitions"
+          },
+          {
+            "group": "apiextensions.k8s.io",
+            "name": "hostsubnets.network.openshift.io",
+            "resource": "customresourcedefinitions"
+          },
+          {
+            "group": "apiextensions.k8s.io",
+            "name": "netnamespaces.network.openshift.io",
+            "resource": "customresourcedefinitions"
+          },
+          {
+            "group": "apiextensions.k8s.io",
+            "name": "egressnetworkpolicies.network.openshift.io",
+            "resource": "customresourcedefinitions"
+          },
+          {
+            "group": "rbac.authorization.k8s.io",
+            "name": "openshift-sdn",
+            "resource": "clusterroles"
+          },
+          {
+            "group": "",
+            "name": "sdn",
+            "namespace": "openshift-sdn",
+            "resource": "serviceaccounts"
+          },
+          {
+            "group": "rbac.authorization.k8s.io",
+            "name": "openshift-sdn",
+            "resource": "clusterrolebindings"
+          },
+          {
+            "group": "",
+            "name": "sdn-controller",
+            "namespace": "openshift-sdn",
+            "resource": "serviceaccounts"
+          },
+          {
+            "group": "rbac.authorization.k8s.io",
+            "name": "openshift-sdn-controller",
+            "resource": "clusterroles"
+          },
+          {
+            "group": "rbac.authorization.k8s.io",
+            "name": "openshift-sdn-controller",
+            "resource": "clusterrolebindings"
+          },
+          {
+            "group": "rbac.authorization.k8s.io",
+            "name": "openshift-sdn-controller-leaderelection",
+            "namespace": "openshift-sdn",
+            "resource": "roles"
+          },
+          {
+            "group": "rbac.authorization.k8s.io",
+            "name": "openshift-sdn-controller-leaderelection",
+            "namespace": "openshift-sdn",
+            "resource": "rolebindings"
+          },
+          {
+            "group": "network.openshift.io",
+            "name": "default",
+            "resource": "clusternetworks"
+          },
+          {
+            "group": "monitoring.coreos.com",
+            "name": "networking-rules",
+            "namespace": "openshift-sdn",
+            "resource": "prometheusrules"
+          },
+          {
+            "group": "apps",
+            "name": "sdn-controller",
+            "namespace": "openshift-sdn",
+            "resource": "daemonsets"
+          },
+          {
+            "group": "monitoring.coreos.com",
+            "name": "monitor-sdn",
+            "namespace": "openshift-sdn",
+            "resource": "servicemonitors"
+          },
+          {
+            "group": "",
+            "name": "sdn",
+            "namespace": "openshift-sdn",
+            "resource": "services"
+          },
+          {
+            "group": "rbac.authorization.k8s.io",
+            "name": "prometheus-k8s",
+            "namespace": "openshift-sdn",
+            "resource": "roles"
+          },
+          {
+            "group": "rbac.authorization.k8s.io",
+            "name": "prometheus-k8s",
+            "namespace": "openshift-sdn",
+            "resource": "rolebindings"
+          },
+          {
+            "group": "apps",
+            "name": "ovs",
+            "namespace": "openshift-sdn",
+            "resource": "daemonsets"
+          },
+          {
+            "group": "",
+            "name": "sdn-config",
+            "namespace": "openshift-sdn",
+            "resource": "configmaps"
+          },
+          {
+            "group": "apps",
+            "name": "sdn",
+            "namespace": "openshift-sdn",
+            "resource": "daemonsets"
+          }
+        ],
+        "versions": [
+          {
+            "name": "operator",
+            "version": "4.2.0-0.nightly-2019-09-04-142146"
+          }
+        ]
+      }
+    },
+    {
+      "apiVersion": "config.openshift.io/v1",
+      "kind": "ClusterOperator",
+      "metadata": {
+        "creationTimestamp": "2019-09-09T15:50:52Z",
+        "generation": 1,
+        "name": "node-tuning",
+        "resourceVersion": "7915",
+        "selfLink": "/apis/config.openshift.io/v1/clusteroperators/node-tuning",
+        "uid": "99db9648-d319-11e9-a26d-0e1292c9e4d0"
+      },
+      "spec": {},
+      "status": {
+        "conditions": [
+          {
+            "lastTransitionTime": "2019-09-09T15:50:59Z",
+            "message": "Cluster has deployed \"4.2.0-0.nightly-2019-09-04-142146\"",
+            "reason": "AsExpected",
+            "status": "True",
+            "type": "Available"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:51:09Z",
+            "message": "Cluster version is \"4.2.0-0.nightly-2019-09-04-142146\"",
+            "reason": "AsExpected",
+            "status": "False",
+            "type": "Progressing"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:50:52Z",
+            "message": "DaemonSet \"tuned\" available",
+            "reason": "AsExpected",
+            "status": "False",
+            "type": "Degraded"
+          }
+        ],
+        "extension": null,
+        "relatedObjects": [
+          {
+            "group": "",
+            "name": "openshift-cluster-node-tuning-operator",
+            "resource": "namespaces"
+          },
+          {
+            "group": "tuned.openshift.io",
+            "name": "default",
+            "namespace": "openshift-cluster-node-tuning-operator",
+            "resource": "Tuned"
+          },
+          {
+            "group": "",
+            "name": "tuned",
+            "namespace": "openshift-cluster-node-tuning-operator",
+            "resource": "ServiceAccount"
+          },
+          {
+            "group": "rbac.authorization.k8s.io",
+            "name": "cluster-node-tuning:tuned",
+            "resource": "ClusterRole"
+          },
+          {
+            "group": "rbac.authorization.k8s.io",
+            "name": "cluster-node-tuning:tuned",
+            "resource": "ClusterRoleBinding"
+          },
+          {
+            "group": "",
+            "name": "tuned-profiles",
+            "namespace": "openshift-cluster-node-tuning-operator",
+            "resource": "ConfigMap"
+          },
+          {
+            "group": "",
+            "name": "tuned-recommend",
+            "namespace": "openshift-cluster-node-tuning-operator",
+            "resource": "ConfigMap"
+          },
+          {
+            "group": "apps",
+            "name": "tuned",
+            "namespace": "openshift-cluster-node-tuning-operator",
+            "resource": "DaemonSet"
+          }
+        ],
+        "versions": [
+          {
+            "name": "operator",
+            "version": "4.2.0-0.nightly-2019-09-04-142146"
+          }
+        ]
+      }
+    },
+    {
+      "apiVersion": "config.openshift.io/v1",
+      "kind": "ClusterOperator",
+      "metadata": {
+        "creationTimestamp": "2019-09-09T15:47:34Z",
+        "generation": 1,
+        "name": "openshift-apiserver",
+        "resourceVersion": "9752",
+        "selfLink": "/apis/config.openshift.io/v1/clusteroperators/openshift-apiserver",
+        "uid": "240967c3-d319-11e9-ab44-0e4ce3d5a8c4"
+      },
+      "spec": {},
+      "status": {
+        "conditions": [
+          {
+            "lastTransitionTime": "2019-09-09T15:50:04Z",
+            "reason": "AsExpected",
+            "status": "False",
+            "type": "Degraded"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:51:41Z",
+            "reason": "AsExpected",
+            "status": "False",
+            "type": "Progressing"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:50:54Z",
+            "reason": "AsExpected",
+            "status": "True",
+            "type": "Available"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:47:34Z",
+            "reason": "AsExpected",
+            "status": "True",
+            "type": "Upgradeable"
+          }
+        ],
+        "extension": null,
+        "relatedObjects": [
+          {
+            "group": "operator.openshift.io",
+            "name": "cluster",
+            "resource": "openshiftapiservers"
+          },
+          {
+            "group": "",
+            "name": "openshift-config",
+            "resource": "namespaces"
+          },
+          {
+            "group": "",
+            "name": "openshift-config-managed",
+            "resource": "namespaces"
+          },
+          {
+            "group": "",
+            "name": "openshift-apiserver-operator",
+            "resource": "namespaces"
+          },
+          {
+            "group": "",
+            "name": "openshift-apiserver",
+            "resource": "namespaces"
+          },
+          {
+            "group": "apiregistration.k8s.io",
+            "name": "v1.apps.openshift.io",
+            "resource": "apiservices"
+          },
+          {
+            "group": "apiregistration.k8s.io",
+            "name": "v1.authorization.openshift.io",
+            "resource": "apiservices"
+          },
+          {
+            "group": "apiregistration.k8s.io",
+            "name": "v1.build.openshift.io",
+            "resource": "apiservices"
+          },
+          {
+            "group": "apiregistration.k8s.io",
+            "name": "v1.image.openshift.io",
+            "resource": "apiservices"
+          },
+          {
+            "group": "apiregistration.k8s.io",
+            "name": "v1.oauth.openshift.io",
+            "resource": "apiservices"
+          },
+          {
+            "group": "apiregistration.k8s.io",
+            "name": "v1.project.openshift.io",
+            "resource": "apiservices"
+          },
+          {
+            "group": "apiregistration.k8s.io",
+            "name": "v1.quota.openshift.io",
+            "resource": "apiservices"
+          },
+          {
+            "group": "apiregistration.k8s.io",
+            "name": "v1.route.openshift.io",
+            "resource": "apiservices"
+          },
+          {
+            "group": "apiregistration.k8s.io",
+            "name": "v1.security.openshift.io",
+            "resource": "apiservices"
+          },
+          {
+            "group": "apiregistration.k8s.io",
+            "name": "v1.template.openshift.io",
+            "resource": "apiservices"
+          },
+          {
+            "group": "apiregistration.k8s.io",
+            "name": "v1.user.openshift.io",
+            "resource": "apiservices"
+          }
+        ],
+        "versions": [
+          {
+            "name": "operator",
+            "version": "4.2.0-0.nightly-2019-09-04-142146"
+          },
+          {
+            "name": "openshift-apiserver",
+            "version": ""
+          }
+        ]
+      }
+    },
+    {
+      "apiVersion": "config.openshift.io/v1",
+      "kind": "ClusterOperator",
+      "metadata": {
+        "creationTimestamp": "2019-09-09T15:47:36Z",
+        "generation": 1,
+        "name": "openshift-controller-manager",
+        "resourceVersion": "521269",
+        "selfLink": "/apis/config.openshift.io/v1/clusteroperators/openshift-controller-manager",
+        "uid": "250ddc54-d319-11e9-ab44-0e4ce3d5a8c4"
+      },
+      "spec": {},
+      "status": {
+        "conditions": [
+          {
+            "lastTransitionTime": "2019-09-09T15:47:36Z",
+            "reason": "AsExpected",
+            "status": "False",
+            "type": "Degraded"
+          },
+          {
+            "lastTransitionTime": "2019-09-10T15:31:22Z",
+            "reason": "AsExpected",
+            "status": "False",
+            "type": "Progressing"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:48:16Z",
+            "reason": "AsExpected",
+            "status": "True",
+            "type": "Available"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:47:36Z",
+            "reason": "NoData",
+            "status": "Unknown",
+            "type": "Upgradeable"
+          }
+        ],
+        "extension": null,
+        "relatedObjects": [
+          {
+            "group": "operator.openshift.io",
+            "name": "cluster",
+            "resource": "openshiftcontrollermanagers"
+          },
+          {
+            "group": "",
+            "name": "openshift-config",
+            "resource": "namespaces"
+          },
+          {
+            "group": "",
+            "name": "openshift-config-managed",
+            "resource": "namespaces"
+          },
+          {
+            "group": "",
+            "name": "openshift-controller-manager-operator",
+            "resource": "namespaces"
+          },
+          {
+            "group": "",
+            "name": "openshift-controller-manager",
+            "resource": "namespaces"
+          }
+        ],
+        "versions": [
+          {
+            "name": "operator",
+            "version": "4.2.0-0.nightly-2019-09-04-142146"
+          }
+        ]
+      }
+    },
+    {
+      "apiVersion": "config.openshift.io/v1",
+      "kind": "ClusterOperator",
+      "metadata": {
+        "creationTimestamp": "2019-09-09T15:51:29Z",
+        "generation": 1,
+        "name": "openshift-samples",
+        "resourceVersion": "15030",
+        "selfLink": "/apis/config.openshift.io/v1/clusteroperators/openshift-samples",
+        "uid": "b0447cd1-d319-11e9-a5c4-12d0f943c266"
+      },
+      "spec": {},
+      "status": {
+        "conditions": [
+          {
+            "lastTransitionTime": "2019-09-09T15:58:24Z",
+            "message": "Samples installation successful at 4.2.0-0.nightly-2019-09-04-142146",
+            "status": "True",
+            "type": "Available"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:58:24Z",
+            "message": "Samples installation successful at 4.2.0-0.nightly-2019-09-04-142146",
+            "status": "False",
+            "type": "Progressing"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:51:44Z",
+            "status": "False",
+            "type": "Degraded"
+          }
+        ],
+        "extension": null,
+        "relatedObjects": [
+          {
+            "group": "samples.operator.openshift.io",
+            "name": "cluster",
+            "resource": "configs"
+          },
+          {
+            "group": "",
+            "name": "openshift-cluster-samples-operator",
+            "resource": "namespaces"
+          },
+          {
+            "group": "",
+            "name": "openshift",
+            "resource": "namespaces"
+          }
+        ],
+        "versions": [
+          {
+            "name": "operator",
+            "version": "4.2.0-0.nightly-2019-09-04-142146"
+          }
+        ]
+      }
+    },
+    {
+      "apiVersion": "config.openshift.io/v1",
+      "kind": "ClusterOperator",
+      "metadata": {
+        "creationTimestamp": "2019-09-09T15:48:03Z",
+        "generation": 1,
+        "name": "operator-lifecycle-manager",
+        "resourceVersion": "12190",
+        "selfLink": "/apis/config.openshift.io/v1/clusteroperators/operator-lifecycle-manager",
+        "uid": "351dd95d-d319-11e9-ab44-0e4ce3d5a8c4"
+      },
+      "spec": {},
+      "status": {
+        "conditions": [
+          {
+            "lastTransitionTime": "2019-09-09T15:48:03Z",
+            "status": "False",
+            "type": "Degraded"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:53:08Z",
+            "message": "Deployed 0.11.0",
+            "status": "False",
+            "type": "Progressing"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:48:03Z",
+            "status": "True",
+            "type": "Available"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:48:03Z",
+            "status": "True",
+            "type": "Upgradeable"
+          }
+        ],
+        "extension": null,
+        "relatedObjects": [
+          {
+            "group": "operators.coreos.com",
+            "name": "operator-lifecycle-manager",
+            "namespace": "openshift-operator-lifecycle-manager",
+            "resource": "OperatorGroup"
+          },
+          {
+            "group": "operators.coreos.com",
+            "name": "operator-lifecycle-manager",
+            "namespace": "openshift-operator-lifecycle-manager",
+            "resource": "ClusterServiceVersion"
+          },
+          {
+            "group": "",
+            "name": "openshift-operator-lifecycle-manager",
+            "resource": "namespaces"
+          }
+        ],
+        "versions": [
+          {
+            "name": "operator",
+            "version": "4.2.0-0.nightly-2019-09-04-142146"
+          },
+          {
+            "name": "operator-lifecycle-manager",
+            "version": "0.11.0"
+          }
+        ]
+      }
+    },
+    {
+      "apiVersion": "config.openshift.io/v1",
+      "kind": "ClusterOperator",
+      "metadata": {
+        "creationTimestamp": "2019-09-09T15:48:02Z",
+        "generation": 1,
+        "name": "operator-lifecycle-manager-catalog",
+        "resourceVersion": "12182",
+        "selfLink": "/apis/config.openshift.io/v1/clusteroperators/operator-lifecycle-manager-catalog",
+        "uid": "34c15a7f-d319-11e9-ab44-0e4ce3d5a8c4"
+      },
+      "spec": {},
+      "status": {
+        "conditions": [
+          {
+            "lastTransitionTime": "2019-09-09T15:48:02Z",
+            "status": "False",
+            "type": "Degraded"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:53:07Z",
+            "message": "Deployed 0.11.0",
+            "status": "False",
+            "type": "Progressing"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:48:02Z",
+            "status": "True",
+            "type": "Available"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:48:02Z",
+            "status": "True",
+            "type": "Upgradeable"
+          }
+        ],
+        "extension": null,
+        "relatedObjects": [
+          {
+            "group": "operators.coreos.com",
+            "name": "operator-lifecycle-manager-catalog",
+            "namespace": "openshift-marketplace",
+            "resource": "Subscription"
+          },
+          {
+            "group": "operators.coreos.com",
+            "name": "operator-lifecycle-manager-catalog",
+            "namespace": "openshift-marketplace",
+            "resource": "InstallPlan"
+          },
+          {
+            "group": "",
+            "name": "openshift-marketplace",
+            "resource": "namespaces"
+          }
+        ],
+        "versions": [
+          {
+            "name": "operator",
+            "version": "4.2.0-0.nightly-2019-09-04-142146"
+          },
+          {
+            "name": "operator-lifecycle-manager",
+            "version": "0.11.0"
+          }
+        ]
+      }
+    },
+    {
+      "apiVersion": "config.openshift.io/v1",
+      "kind": "ClusterOperator",
+      "metadata": {
+        "creationTimestamp": "2019-09-09T15:48:03Z",
+        "generation": 1,
+        "name": "operator-lifecycle-manager-packageserver",
+        "resourceVersion": "400328",
+        "selfLink": "/apis/config.openshift.io/v1/clusteroperators/operator-lifecycle-manager-packageserver",
+        "uid": "351d957e-d319-11e9-ab44-0e4ce3d5a8c4"
+      },
+      "spec": {},
+      "status": {
+        "conditions": [
+          {
+            "lastTransitionTime": "2019-09-09T15:48:03Z",
+            "status": "False",
+            "type": "Degraded"
+          },
+          {
+            "lastTransitionTime": "2019-09-10T10:46:54Z",
+            "status": "True",
+            "type": "Available"
+          },
+          {
+            "lastTransitionTime": "2019-09-10T10:46:54Z",
+            "message": "Deployed version 0.11.0",
+            "status": "False",
+            "type": "Progressing"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:48:03Z",
+            "message": "Safe to upgrade",
+            "status": "True",
+            "type": "Upgradeable"
+          }
+        ],
+        "extension": null,
+        "relatedObjects": [
+          {
+            "group": "",
+            "name": "openshift-operator-lifecycle-manager",
+            "resource": "namespaces"
+          },
+          {
+            "group": "operators.coreos.com",
+            "name": "packageserver",
+            "namespace": "openshift-operator-lifecycle-manager",
+            "resource": "ClusterServiceVersion"
+          }
+        ],
+        "versions": [
+          {
+            "name": "operator",
+            "version": "4.2.0-0.nightly-2019-09-04-142146"
+          },
+          {
+            "name": "packageserver",
+            "version": "0.11.0"
+          }
+        ]
+      }
+    },
+    {
+      "apiVersion": "config.openshift.io/v1",
+      "kind": "ClusterOperator",
+      "metadata": {
+        "creationTimestamp": "2019-09-09T15:47:34Z",
+        "generation": 1,
+        "name": "service-ca",
+        "resourceVersion": "3332",
+        "selfLink": "/apis/config.openshift.io/v1/clusteroperators/service-ca",
+        "uid": "245fd680-d319-11e9-ab44-0e4ce3d5a8c4"
+      },
+      "spec": {},
+      "status": {
+        "conditions": [
+          {
+            "lastTransitionTime": "2019-09-09T15:47:41Z",
+            "reason": "AsExpected",
+            "status": "False",
+            "type": "Degraded"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:47:48Z",
+            "message": "Progressing: All service-ca-operator deployments updated",
+            "reason": "AsExpected",
+            "status": "False",
+            "type": "Progressing"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:47:41Z",
+            "reason": "AsExpected",
+            "status": "True",
+            "type": "Available"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:47:34Z",
+            "reason": "NoData",
+            "status": "Unknown",
+            "type": "Upgradeable"
+          }
+        ],
+        "extension": null,
+        "relatedObjects": [
+          {
+            "group": "operator.openshift.io",
+            "name": "cluster",
+            "resource": "servicecas"
+          },
+          {
+            "group": "",
+            "name": "openshift-config",
+            "resource": "namespaces"
+          },
+          {
+            "group": "",
+            "name": "openshift-config-managed",
+            "resource": "namespaces"
+          },
+          {
+            "group": "",
+            "name": "openshift-service-ca-operator",
+            "resource": "namespaces"
+          },
+          {
+            "group": "",
+            "name": "openshift-service-ca",
+            "resource": "namespaces"
+          }
+        ],
+        "versions": [
+          {
+            "name": "operator",
+            "version": "4.2.0-0.nightly-2019-09-04-142146"
+          }
+        ]
+      }
+    },
+    {
+      "apiVersion": "config.openshift.io/v1",
+      "kind": "ClusterOperator",
+      "metadata": {
+        "creationTimestamp": "2019-09-09T15:50:50Z",
+        "generation": 1,
+        "name": "service-catalog-apiserver",
+        "resourceVersion": "6688",
+        "selfLink": "/apis/config.openshift.io/v1/clusteroperators/service-catalog-apiserver",
+        "uid": "98bdba2d-d319-11e9-869e-0228550fc200"
+      },
+      "spec": {},
+      "status": {
+        "conditions": [
+          {
+            "lastTransitionTime": "2019-09-09T15:50:51Z",
+            "reason": "AsExpected",
+            "status": "False",
+            "type": "Degraded"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:50:51Z",
+            "reason": "AsExpected",
+            "status": "False",
+            "type": "Progressing"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:50:51Z",
+            "message": "Available: the apiserver is in the desired state (Removed).",
+            "reason": "AsExpected",
+            "status": "True",
+            "type": "Available"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:50:50Z",
+            "reason": "NoData",
+            "status": "Unknown",
+            "type": "Upgradeable"
+          }
+        ],
+        "extension": null,
+        "relatedObjects": [
+          {
+            "group": "",
+            "name": "openshift-config",
+            "resource": "namespaces"
+          },
+          {
+            "group": "",
+            "name": "openshift-config-managed",
+            "resource": "namespaces"
+          },
+          {
+            "group": "",
+            "name": "openshift-service-catalog-apiserver-operator",
+            "resource": "namespaces"
+          },
+          {
+            "group": "",
+            "name": "openshift-service-catalog-apiserver",
+            "resource": "namespaces"
+          },
+          {
+            "group": "apiregistration.k8s.io",
+            "name": "v1beta1.servicecatalog.k8s.io",
+            "resource": "apiservices"
+          }
+        ],
+        "versions": [
+          {
+            "name": "operator",
+            "version": "4.2.0-0.nightly-2019-09-04-142146"
+          }
+        ]
+      }
+    },
+    {
+      "apiVersion": "config.openshift.io/v1",
+      "kind": "ClusterOperator",
+      "metadata": {
+        "creationTimestamp": "2019-09-09T15:50:50Z",
+        "generation": 1,
+        "name": "service-catalog-controller-manager",
+        "resourceVersion": "6458",
+        "selfLink": "/apis/config.openshift.io/v1/clusteroperators/service-catalog-controller-manager",
+        "uid": "98d23891-d319-11e9-a5c4-12d0f943c266"
+      },
+      "spec": {},
+      "status": {
+        "conditions": [
+          {
+            "lastTransitionTime": "2019-09-09T15:50:50Z",
+            "reason": "AsExpected",
+            "status": "False",
+            "type": "Degraded"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:50:50Z",
+            "reason": "AsExpected",
+            "status": "False",
+            "type": "Progressing"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:50:50Z",
+            "reason": "AsExpected",
+            "status": "True",
+            "type": "Available"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:50:50Z",
+            "reason": "NoData",
+            "status": "Unknown",
+            "type": "Upgradeable"
+          }
+        ],
+        "extension": null,
+        "relatedObjects": [
+          {
+            "group": "operator.openshift.io",
+            "name": "cluster",
+            "resource": "servicecatalogcontrollermanagers"
+          },
+          {
+            "group": "",
+            "name": "openshift-service-catalog-controller-manager-operator",
+            "resource": "namespaces"
+          },
+          {
+            "group": "",
+            "name": "openshift-service-catalog-controller-manager",
+            "resource": "namespaces"
+          }
+        ],
+        "versions": [
+          {
+            "name": "operator",
+            "version": "4.2.0-0.nightly-2019-09-04-142146"
+          }
+        ]
+      }
+    },
+    {
+      "apiVersion": "config.openshift.io/v1",
+      "kind": "ClusterOperator",
+      "metadata": {
+        "creationTimestamp": "2019-09-09T15:51:27Z",
+        "generation": 1,
+        "name": "storage",
+        "resourceVersion": "8585",
+        "selfLink": "/apis/config.openshift.io/v1/clusteroperators/storage",
+        "uid": "aebf7e52-d319-11e9-a5c4-12d0f943c266"
+      },
+      "spec": {},
+      "status": {
+        "conditions": [
+          {
+            "lastTransitionTime": "2019-09-09T15:51:27Z",
+            "reason": "AsExpected",
+            "status": "True",
+            "type": "Available"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:51:27Z",
+            "reason": "AsExpected",
+            "status": "False",
+            "type": "Degraded"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:51:27Z",
+            "reason": "AsExpected",
+            "status": "True",
+            "type": "Upgradeable"
+          },
+          {
+            "lastTransitionTime": "2019-09-09T15:51:27Z",
+            "reason": "AsExpected",
+            "status": "False",
+            "type": "Progressing"
+          }
+        ],
+        "extension": null,
+        "relatedObjects": [
+          {
+            "group": "",
+            "name": "openshift-cluster-storage-operator",
+            "resource": "namespaces"
+          },
+          {
+            "group": "config.openshift.io",
+            "name": "cluster",
+            "resource": "infrastructures"
+          },
+          {
+            "group": "storage.k8s.io",
+            "name": "gp2",
+            "resource": "storageclasses"
+          }
+        ],
+        "versions": [
+          {
+            "name": "operator",
+            "version": "4.2.0-0.nightly-2019-09-04-142146"
+          }
+        ]
+      }
+    }
+  ],
+  "kind": "List",
+  "metadata": {
+    "resourceVersion": "",
+    "selfLink": ""
+  }
+}
