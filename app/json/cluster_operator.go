@@ -10,7 +10,7 @@ func main() {
 	getClusterOperatorStatuses()
 }
 
-func getClusterOperatorStatuses() ClusterOperator {//<-chan ClusterOperator {
+func getClusterOperatorStatuses() ClusterOperator {
 	var clusterOperator ClusterOperator
 	cmd, err := utils.RunShellCmd("oc get clusteroperator -o json")
 	printError(err)
@@ -18,18 +18,39 @@ func getClusterOperatorStatuses() ClusterOperator {//<-chan ClusterOperator {
 	printError(err)
 	for i := 0; i < len(clusterOperator.Items); i++ {
 		for _, condition := range clusterOperator.Items[i].Status.ConditionsOperator {
-			fmt.Println(clusterOperator.Items[i].Metadata.Name, condition.Type, condition.Status)
+			//fmt.Println(clusterOperator.ItemsOperator[i].MetadataState.Name, condition.Type, condition.StatusState)
+			result := GetClusterState(clusterOperator.Items[i].Metadata.Name, condition.Type, condition.Status)
+			if result == false {
+			fmt.Println(clusterOperator.Items[i].Metadata.Name, condition.Type, result)
+			}
 		}
 	}
 	return clusterOperator
 }
 
-type ClusterOperator struct {
-	ApiVersion string  `json:"apiVersion"`
-	Items      []Items `json:"items"`
+func GetClusterState(operatorName, conditionType string, conditionStatus string) bool {
+	var result bool
+	var clusterState ClusterState
+	cmd, err := utils.RunShellCmd("oc get clusterstate olegtest -o json")
+	printError(err)
+	err = json.Unmarshal([]byte(cmd), &clusterState)
+	printError(err)
+	for i := 0; i < len(clusterState.Status.ClusterOperators); i++ {
+		for _, condition := range clusterState.Status.ClusterOperators[i].Conditions {
+			if clusterState.Status.ClusterOperators[i].Name == operatorName &&  condition.Type == conditionType && condition.Status == conditionStatus {
+				result = true
+			}
+		}
+	}
+	return result
 }
 
-type Items struct {
+type ClusterOperator struct {
+	ApiVersion string          `json:"apiVersion"`
+	Items      []ItemsOperator `json:"items"`
+}
+
+type ItemsOperator struct {
 	ApiVersion string           `json:"apiVersion"`
 	Kind       string           `json:"kind"`
 	Metadata   MetadataOperator `json:"metadata"`
@@ -55,7 +76,7 @@ type RelatedObjects struct {
 	Resource string `json:"resource"`
 }
 
-type Versions struct {
+type VersionsOperator struct {
 	Name    string `json:"name"`
 	Version string `json:"version"`
 }
@@ -64,10 +85,59 @@ type StatusOperator struct {
 	ConditionsOperator []ConditionsOperator `json:"conditions"`
 	Extension          string               `json:"extension"`
 	RelatedObjects     []RelatedObjects     `json:"relatedObjects"`
-	Versions           []Versions           `json:"versions"`
+	Versions           []VersionsOperator   `json:"versions"`
 }
 
 type ConditionsOperator struct {
+	LastTransitionTime string `json:"lastTransitionTime"`
+	Reason             string `json:"reason"`
+	Status             string `json:"status"`
+	Type               string `json:"type"`
+}
+
+
+type ClusterState struct {
+	ApiVersion string        `json:"apiVersion"`
+	Kind       string        `json:"kind"`
+	Metadata   MetadataState `json:"metadata"`
+	Spec       Spec          `json:"spec"`
+	Status     StatusState   `json:"status"`
+}
+
+type MetadataState struct {
+	CreationTimestamp string                 `json:"creationTimestamp"`
+	Generation        int32                  `json:"generation"`
+	Name              string                 `json:"name"`
+	Namespace         string                 `json:"namespace"`
+	OwnerReferences   []OwnerReferencesState `json:"ownerReferences"`
+	ResourceVersion   string                 `json:"resourceVersion"`
+	SelfLink          string                 `json:"selfLink"`
+	Uid               string                 `json:"uid"`
+}
+
+type OwnerReferencesState struct {
+	ApiVersion         string `json:"apiVersion"`
+	BlockOwnerDeletion bool   `json:"blockOwnerDeletion"`
+	Controller         bool   `json:"controller"`
+	Kind               string `json:"kind"`
+	Name               string `json:"name"`
+	Uid                string `json:"uid"`
+}
+
+type Spec struct {
+}
+
+type StatusState struct {
+	ClusterOperators []ClusterOperatorsState `json:"clusterOperators"`
+	lastUpdated      string                  `json:"lastUpdated"`
+}
+
+type ClusterOperatorsState struct {
+	Conditions []ConditionsState `json:"conditions"`
+	Name       string            `json:"name"`
+}
+
+type ConditionsState struct {
 	LastTransitionTime string `json:"lastTransitionTime"`
 	Reason             string `json:"reason"`
 	Status             string `json:"status"`
